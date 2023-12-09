@@ -1,7 +1,8 @@
 # Git-Documentation
 Originally written for internal use at TKGraphics. Posted because I could not find a comprehensive guide online. Also serves as an example of the documentation work I have done.
 
-![TKGraphics](https://tkgraphics.ca/wp-content/uploads/2021/03/tk-graphics-logo.png =233x57)
+
+<img src="[https://your-image-url.type](https://tkgraphics.ca/wp-content/uploads/2021/03/tk-graphics-logo.png)" width="233" height="57">
 
 # Hello! 👋
 >This is your guide to setting up Git's Version Control system. It includes both local environment and server set-up. 

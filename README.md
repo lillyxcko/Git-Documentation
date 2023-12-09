@@ -295,7 +295,8 @@ If it does not prompt you to enter a password SSH has been configured successful
 
 # Git IDE Configuration
 
->IDE: ![PHPStorm](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/PhpStorm_Icon.svg/2048px-PhpStorm_Icon.svg.png "PHPStorm"){width=25 height=25px} PHPStorm 
+>IDE: <a href="url"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/PhpStorm_Icon.svg/2048px-PhpStorm_Icon.svg.png" align="left" height="25" width="25" ></a> PHPStorm 
+
 
 ### 1. Open your project folder in the IDE.
 

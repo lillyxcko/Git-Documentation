@@ -1,7 +1,7 @@
 # Git-Documentation
-Originally written for internal use at TKGraphics. Posted because I could not find a comprehensive guide online. Also serves as an example of the documentation work I have done.
+This comprehensive guide, originally created for internal use at TK Graphics, provides step-by-step instructions for setting up Git in both local and server environments. Presented in GitLab-flavored markdown, this guide was created to address the lack of an easily accessible, all-encompassing resource on this topic online. As a bonus, it stands as an example of my documentation.
 
-
+<br>
 <img src="https://tkgraphics.ca/wp-content/uploads/2021/03/tk-graphics-logo.png" width="233" height="57">
 
 # Hello! 👋

@@ -7,7 +7,7 @@ This comprehensive guide, originally created for internal use at TK Graphics, pr
 # Hello! 👋
 >This is your guide to setting up Git's Version Control system. It includes both local environment and server set-up. 
 
-> 🌱 Please make sure you have the [latest version of git installed](https://git-scm.com/downloads). Configure all based on 
+> 🌱 Please make sure you have the [latest version of git installed](https://git-scm.com/downloads). You may configure all based on Git's recomended default selections.
 
 >Authored: Lilly Ko 2023-12-03
 

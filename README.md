@@ -34,16 +34,8 @@ If you don't have an SSH key pair, you need to generate one:
 
 This command will prompt you to specify a file to save the key. Press [Enter] to set as default. You don't need to set up a password. Press [Enter] twice to proceed without password. 
 
-### 2. Add SSH Key to SSH Agent:
-Start the SSH agent:
 
-`eval "$(ssh-agent -s)"`
-
-Add your SSH private key to the agent:
-
-`ssh-add ~/.ssh/id_rsa`
-
-### 3. Add SSH Key to GitLab:
+### 2. Add SSH Key to GitLab:
 Copy the SSH public key to your clipboard:
 
 `cat ~/.ssh/id_rsa.pub`
@@ -60,7 +52,7 @@ Optionally, give your SSH key a recognizable title in the "Title" field. You can
 
 Click Add Key.
 
-### 4. Test the SSH Connection:
+### 3. Test the SSH Connection:
 Test the SSH connection to make sure it's working correctly:
 
 `ssh -T git@gitlab.com`

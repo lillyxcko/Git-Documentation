@@ -312,6 +312,7 @@ If it does not prompt you to enter a password SSH has been configured successful
 # Git IDE Configuration
 
 >IDE: <a href="url"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/PhpStorm_Icon.svg/2048px-PhpStorm_Icon.svg.png" align="left" height="25" width="25" ></a> PHPStorm 
+
 >You need PHPStorm Version greater than 2023.2 to integrate GitLab
 
 ### 1. Open your project folder in the IDE.

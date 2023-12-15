@@ -1,5 +1,5 @@
 # Disclaimer
-This comprehensive guide, originally created for internal use at TK Graphics, provides step-by-step instructions for setting up Git in both local and server environments. Presented in GitLab-flavored markdown, this guide was created to address the lack of an easily accessible, all-encompassing resource on this topic online. As a bonus, it stands as an example of my documentation.
+This comprehensive guide, originally created for internal use at TK Graphics, provides step-by-step instructions for setting up Git in both local and server environments. Presented in GitLab-flavored markdown, this guide was created to address the lack of an easily accessible, all-encompassing resource on this topic online.
 
 <br><br>
 <img src="https://tkgraphics.ca/wp-content/uploads/2021/03/tk-graphics-logo.png" width="233" height="57">
@@ -20,6 +20,7 @@ This comprehensive guide, originally created for internal use at TK Graphics, pr
 - [Setting Up SSH Key Authentication on Server](#setting-up-ssh-key-authentication-on-server)
 - [Git IDE Configuration](#git-ide-configuration)
 - [Configure Git Repo on Server](#configuring-git-repo-on-server)
+- [Troubleshooting Common Errors](#troubleshooting-common-errors)
 
 <br><br>
 
@@ -418,3 +419,24 @@ After [setting up the Git remote](#8-push-changes-to-live-server) to this server
 
 If you chose a different name for your server remote, place it over "live".
  
+<br><br>
+# Troubleshooting Common Errors
+
+```
+From gitlab.com:tkgraphics/tk103
+   32dae76a..2db6f69b  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+Updating 32dae76a..2db6f69b
+```
+
+Why: This error message from Git indicates that you have changes in your local repository that haven't been committed, and Git is preventing you from pulling changes from the remote repository (in this case, from the branch main on GitLab) because it would overwrite your local changes.
+
+Resolution: 
+
+`git stash`
+
+`git pull`
+
+`git stash pop`
+
+Now you can try to "[git export](#configure-git-command-shortcut)" again. 

@@ -25,11 +25,11 @@ This comprehensive guide, originally created for internal use at TK Graphics, pr
 <br><br>
 
 # Adding SSH Key to GitLab (to allow push/pull)
->The following is to be done in your local environment. 
+>The following is to be done in your local environment in a command prompt/terminal of your choice. This guide uses Git Bash.
 
 ### 1. Generate SSH Key Pair:
 
-If you don't have an SSH key pair, you need to generate one:
+If you don't have an SSH key pair, you need to generate one. Copy and paste the following into Git Bash and press [Enter]: 
 
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
@@ -37,7 +37,7 @@ This command will prompt you to specify a file to save the key. Press [Enter] to
 
 
 ### 2. Add SSH Key to GitLab:
-Copy the SSH public key to your clipboard:
+Paste the command below into Git Bash, and copy the SSH public key that appears to your clipboard.
 
 `cat ~/.ssh/id_rsa.pub`
 
@@ -54,7 +54,7 @@ Optionally, give your SSH key a recognizable title in the "Title" field. You can
 Click Add Key.
 
 ### 3. Test the SSH Connection:
-Test the SSH connection to make sure it's working correctly:
+In Git Bash, test the SSH connection to make sure it's working correctly:
 
 `ssh -T git@gitlab.com`
 
@@ -70,6 +70,8 @@ GitLab should respond with a welcome message.
 Create a directory to hold the repository's code. 
 
 Open Git Bash on your local computer and navigate to the directory.
+> Tip: you can use `cd dir_name` to enter directories, and `ls -a` to see all the directories you can enter.
+> Alternatively, open the directory in your File Explorer, type `cd ` in Git Bash, and drag and drop the folder into Bash. It should paste the directory's path. Press [Enter] and you will be inside the directory.
 
 Run the following command in that dir to initialize a Git repository inside:
 

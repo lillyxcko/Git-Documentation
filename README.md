@@ -227,17 +227,19 @@ Now your code should be pushed onto the server of IP address you specified in th
 
 <br>
 
-1. Make sure you are in your local home directory:
+### 1. Make sure you are in your local home directory:
 `cd ~` 
 
 <br>
 
-2. Open the git config file
+### 2. Open the git config file:
 `git config --global --edit`
 
 <br>
   
-3. With the file opened in bash, press the letter [I] to enter INSERT mode. Keep ay exiting text in the file while pasting the following into config file:
+### 3. With the file opened in bash, press the letter [I] to enter INSERT mode: 
+
+Keep any exiting text in the file while pasting the following into config file:
 ```
 [alias]
     export = "!f() { git pull && git add . && git commit -m \"$*\" && git push origin && git push live; }; f"
@@ -255,7 +257,8 @@ Server - `git remote add live ssh://tk_admin@server-ip-address/var/git/web.git`
 
 <br>
 
-4. Save the changes in git config file. Here are instructions on how to save files on Nano editor:
+### 4. Save the changes in git config file:
+Here are instructions on how to save files on Nano editor:
 ```
     - Press Ctrl + O (that's the letter O, not zero).
 
@@ -265,7 +268,8 @@ Server - `git remote add live ssh://tk_admin@server-ip-address/var/git/web.git`
 ```
 <br>
 
-5.  Navigate to your local git repo dir and test the shortcut in your IDE or GitBash terminal:
+### 5.  Test the shortcut:
+Navigate to your local git repo dir and test the shortcut in your IDE or GitBash terminal:
 
 `git export "this is a commit message"`
 

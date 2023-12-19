@@ -237,7 +237,9 @@ Now your code should be pushed onto the server of IP address you specified in th
 
 <br>
   
-### 3. With the file opened in bash, press the letter [I] to enter INSERT mode: 
+### 3. Edit the file:
+
+With the file opened in bash, press the letter [I] to enter INSERT mode.
 
 Keep any exiting text in the file while pasting the following into config file:
 ```

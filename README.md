@@ -27,6 +27,8 @@ This comprehensive guide, originally created for internal use at TK Graphics, pr
 # Adding SSH Key to GitLab (to allow push/pull)
 >The following is to be done in your local environment in a command prompt/terminal of your choice. This guide uses Git Bash.
 
+<br>
+
 ### 1. Generate SSH Key Pair:
 
 If you don't have an SSH key pair, you need to generate one. Copy and paste the following into Git Bash and press [Enter]: 
@@ -35,6 +37,7 @@ If you don't have an SSH key pair, you need to generate one. Copy and paste the 
 
 This command will prompt you to specify a file to save the key. Press [Enter] to set as default. You don't need to set up a password. Press [Enter] twice to proceed without password. 
 
+<br>
 
 ### 2. Add SSH Key to GitLab:
 Paste the command below into Git Bash, and copy the SSH public key that appears to your clipboard.

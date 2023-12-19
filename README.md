@@ -16,7 +16,7 @@ This comprehensive guide, originally created for internal use at TK Graphics, pr
 #### Table of Contents:
 - [Adding SSH Key to GitLab](#adding-ssh-key-to-gitlab-to-allow-pushpull) 
 - [GitLab on your Local Environment](#gitlab-on-your-local-env)
-- [Create Git Command Shortcut](#configure-git-command-shortcut)
+- [Create Git Alias](#create-git-alias)
 - [Setting Up SSH Key Authentication on Server](#setting-up-ssh-key-authentication-on-server)
 - [Git IDE Configuration](#git-ide-configuration)
 - [Configure Git Repo on Server](#configuring-git-repo-on-server)
@@ -222,7 +222,7 @@ Now your code should be pushed onto the server of IP address you specified in th
 
 <br><br>
 
-# Configure Git Command Shortcut
+# Create Git Alias
 >Condenses the 5 Git commands to get code on the live server into 1 command.
 
 <br>

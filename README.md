@@ -56,6 +56,8 @@ Optionally, give your SSH key a recognizable title in the "Title" field. You can
 
 Click Add Key.
 
+<br>
+
 ### 3. Test the SSH Connection:
 In Git Bash, test the SSH connection to make sure it's working correctly:
 
@@ -69,6 +71,9 @@ GitLab should respond with a welcome message.
 
 # GitLab on your Local Env.
 >Pre-requisite: [Install Git](https://git-scm.com/downloads)
+
+<br>
+
 ### 1. Initialize Git in a directory:
 Create a directory to hold the repository's code. 
 
@@ -89,6 +94,8 @@ Replace repo-name with the name of the remote repository set-up in GitLab. TK's 
 if you have accidentaly create a origin remote already, you can remove origin remote by:
 
 `git remote rm origin`
+
+<br>
 
 ### 2. Clone the GitLab Repository:
 In your local directory where you want to clone the repository,
@@ -121,13 +128,19 @@ It will prompt you to log into your GitLab. Login to the GitLab account which ha
 
 >Confirm it on GitLab. If you have competed this subset of tasks, you can skip #3, 4, 5, 6, 7
 
+<br>
+
 ### 3. Move into the Cloned Repository:
 Navigate into the directory of the cloned repository:
 
 `cd your-repository`
 
+<br>
+
 ### 4. Make Changes to the Project:
 Make the necessary changes to the files within the repository using your preferred text editor or IDE.
+
+<br>
 
 ### 5. Apply the local changes to the repository - Pull, Stage and Commit Changes:
 Make sure your local copy is up-to-date with the repo.
@@ -156,6 +169,8 @@ Replace "Your commit message" with a brief and descriptive message about the cha
 
 Read the message prompt carefully. If the operation is not successful, follow its suggestions to configure your account accordingly. 
 
+<br>
+
 ### 6. Push Changes to GitLab:
 Push your committed changes to the GitLab repository:
 
@@ -166,10 +181,12 @@ If you are working on a different branch, replace master with the name of your b
 
 (See #7 on how to push directly to the live server)
 
+<br>
 
 ### 7. Verify Changes on GitLab:
 Visit your GitLab repository in a web browser and navigate to the repository's "Commits" section. Verify that your recent commit is listed.
 
+<br>
 
 ### 8. Push Changes to Live Server:
 #####      a. Check Git Remotes:
@@ -208,11 +225,17 @@ Now your code should be pushed onto the server of IP address you specified in th
 # Configure Git Command Shortcut
 >Condenses the 5 Git commands to get code on the live server into 1 command.
 
+<br>
+
 1. Make sure you are in your local home directory:
 `cd ~` 
 
+<br>
+
 2. Open the git config file
 `git config --global --edit`
+
+<br>
   
 3. With the file opened in bash, press the letter [I] to enter INSERT mode. Keep ay exiting text in the file while pasting the following into config file:
 ```
@@ -230,6 +253,8 @@ GitLab Repo - `git remote add origin git@gitlab.com:tkgraphics/your-repo.git`
 
 Server - `git remote add live ssh://tk_admin@server-ip-address/var/git/web.git`
 
+<br>
+
 4. Save the changes in git config file. Here are instructions on how to save files on Nano editor:
 ```
     - Press Ctrl + O (that's the letter O, not zero).
@@ -238,6 +263,7 @@ Server - `git remote add live ssh://tk_admin@server-ip-address/var/git/web.git`
 
     - To exit Nano, press Ctrl + X.
 ```
+<br>
 
 5.  Navigate to your local git repo dir and test the shortcut in your IDE or GitBash terminal:
 
@@ -255,12 +281,15 @@ Try the shortcut again.
 # Setting up SSH Key Authentication on Server[*]
 >Every user who pushes code to the server should have SSH Auth set up for their devices.
 
+<br>
 
 ### 1. Log in to the Server:
 
 Log in to your server using a password:
 
 `ssh tk_admin@server-ip-address`
+
+<br>
 
 ### 2. Add Public Key to authorized_keys:
 
@@ -292,6 +321,7 @@ Paste the copied public key into this file. Here are instructions on how to save
     - To exit Nano, press Ctrl + X.
 ```
 
+<br>
 
 ### 3. Adjust Permissions:
 
@@ -301,9 +331,13 @@ Make sure the permissions are set correctly:
 
 `chmod 600 ~/.ssh/authorized_keys`
 
+<br>
+
 ### 4. Configure SSH Agent:
 
 `eval "$(ssh-agent -s)"`
+
+<br>
 
 ### 5. Test if Configured: 
 
@@ -321,6 +355,8 @@ If it does not prompt you to enter a password SSH has been configured successful
 
 >You need PHPStorm Version 2023.2 or greater to integrate GitLab
 
+<br>
+
 ### 1. Open your project folder in the IDE.
 
    Navigate: “Settings” (Ctrl+Alt+S) > “Version Control” > “Git”
@@ -330,6 +366,8 @@ If it does not prompt you to enter a password SSH has been configured successful
    Have the following fields checked: 
    * [x] Auto-update if push of the current branch was rejected
    * [x] Use credential helper : Apply
+
+<br>
 
 ### 2. Create a Personal Access Token
 
@@ -347,11 +385,15 @@ If it does not prompt you to enter a password SSH has been configured successful
 
     Create and Copy your personal access token.
 
+<br>
+
 ### 3. Install GitLab
 
    Go to “Settings” > “Plugins” > “Marketplace”
    
    Search for the GitLab plugin and install it. 
+
+<br>
 
 ### 4. Add GitLab account to IDE
 
@@ -368,8 +410,12 @@ Now you can git pull/add/commit/push from the IDE terminal.
 # Configuring Git Repo on Server
 >[FOR ADMIN ONLY] This only needs to be done once when the server is initalized. Skip this if you are only setting up Git on your local environment. 
 
+<br>
+
 ### 1. Log in to the Server: 
 `ssh tk_admin@server-ip-address`
+
+<br>
 
 ### 2. Create a Bare Git Repository in the Server:
 ```
@@ -386,6 +432,8 @@ cd git
 git init --bare --shared web.git && cd $_
 ```
 Once finsihed, the path to the bare Git repository should be: /var/git/web.git
+
+<br>
 
 ### 3. Post-Receive Hook:
 ```
@@ -416,6 +464,8 @@ cd ..
 
 chmod +x hooks/post-receive
 ```
+
+<br>
 
 ### 4. Testing:
 After [setting up the Git remote](#8-push-changes-to-live-server) to this server, you can push code to it by: 

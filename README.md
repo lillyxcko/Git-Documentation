@@ -108,7 +108,7 @@ Replace repo-name with the name of the GitLab repository.
 
 It will prompt you to log into your GitLab. Login to the GitLab account which has access to the TK repos. 
 
-⚠ git clone may make another dir within your dir (e.g. TK15 > tk15). It is suggested to only have one level (e.g. TK15) so rearrange the files accordingly.
+⚠ git clone with the above command will make another dir within your dir (e.g. TK15 > tk15). It is suggested to only have one level (e.g. TK15) so rearrange the files accordingly.
 
 #### If there is no GitLab repo, or you want to clone directly from the server into your local:
 

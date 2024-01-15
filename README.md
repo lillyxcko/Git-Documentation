@@ -189,7 +189,7 @@ Visit your GitLab repository in a web browser and navigate to the repository's "
 <br>
 
 ### 8. Push Changes to Live Server:
-#####      a. Check Git Remotes:
+####      a. Check Git Remotes:
 In your local repository workspace, use this command to check what remotes your Git has:
 `git remote -v`
 
@@ -198,7 +198,7 @@ A remote is like a "path" you want your code files to take
 At this point there should be by default an "origin" remote which points to the Git Repository. 
 
 If there are no remotes which have a url pointing to the live server's IP Address, you can add one as outlined in step b.
-#####      b. Add Git Server Remote:
+####      b. Add Git Server Remote:
 `git remote add live ssh://tk_admin@server-ip-address/var/git/web.git`
 
 The name of your new remote will be called "live". It is suggested to keep it as "live". You may replace "live" with a custom name if needed.
@@ -207,7 +207,7 @@ Note: the path specified above is the default path to Git repos that are set up 
 
 You will get a message saying "Are you sure you want to continue connecting...". Type "yes" in the terminal.
 
-#####      c. Push to Server:
+####      c. Push to Server:
 `git push live`
 
 If you had chosen a different remote name, replace it over "live".
